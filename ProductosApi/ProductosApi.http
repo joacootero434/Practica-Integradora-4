@@ -1,0 +1,67 @@
+@host = https://localhost:7095
+
+
+
+
+GET {{host}}/api/products
+
+
+GET {{host}}/api/products/3
+
+
+GET {{host}}/api/products/999
+
+
+POST {{host}}/api/products
+Content-Type: application/json
+
+{
+  "name": "Parlante Bluetooth",
+  "price": 15000
+}
+
+
+PUT {{host}}/api/products/1
+Content-Type: application/json
+
+{
+  "name": "Mouse gamer",
+  "price": 5000
+}
+
+PUT {{host}}/api/products/999
+Content-Type: application/json
+
+{
+  "name": "Producto fantasma",
+  "price": 100
+}
+
+
+DELETE {{host}}/api/products/2
+
+
+
+
+GET {{host}}/api/products/search?name=teclado
+
+GET {{host}}/api/products/search?name=zzzzz
+
+GET {{host}}/api/products/stats
+
+
+POST {{host}}/api/products
+Content-Type: application/json
+
+{
+  "name": "",
+  "price": 100
+}
+
+POST {{host}}/api/products
+Content-Type: application/json
+
+{
+  "name": "Webcam HD",
+  "price": 8000
+}
